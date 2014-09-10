@@ -2,36 +2,36 @@
 namespace Man\Core\Lib;
 /**
  * 环境检查相关
- * 
+ *
 * @author walkor <workerman.net>
  */
 class Checker
 {
-    
+
     /**
      * 最长的workerName
      * @var integer
      */
     protected static $maxWorkerNameLength = 10;
-    
+
     /**
      * 最长的user name
      * @var integer
      */
     protected static $maxUserNameLength = 10;
-    
+
     /**
      * 最长的listen address
      * @var integer
      */
     protected static $maxListenLength = 10;
-    
+
     /**
      * 最长的process count
      * @var integer
      */
     protected static $maxProcessCountLength = 9;
-    
+
     /**
      * 检查启动worker进程的的用户是否合法
      * @return void
@@ -44,7 +44,7 @@ class Checker
             return !empty($user_info);
         }
     }
-    
+
     /**
      * 检查扩展支持情况
      * @return void
@@ -60,7 +60,7 @@ class Checker
                 'libevent'   => false,
                 'proctitle'   => false,
         );
-    
+
         // 检查每个扩展支持情况
         $pad_length = 26;
         foreach($need_map as $ext_name=>$must_required)
@@ -72,7 +72,7 @@ class Checker
                 \Man\Core\Master::notice($ext_name. " [NOT SUPORT BUT REQUIRED] \tYou have to enable {$ext_name} \tWorkerman start fail");
                 exit(str_pad('* ' . $ext_name, $pad_length) . " \033[31;40m [NOT SUPORT BUT REQUIRED] \033[0m\n\n\033[31;40mYou have to enable {$ext_name} \033[0m\n\n\033[31;40mWorkerman start fail\033[0m\n\n");
             }
-    
+
             // 不支持
             if(!$suport)
             {
@@ -90,7 +90,7 @@ class Checker
             }
         }
     }
-    
+
     /**
      * 检查禁用的函数
      * @return void
@@ -118,7 +118,7 @@ class Checker
             }
         }
     }
-    
+
     /**
      * 检查worker配置、worker语法错误等
      * @return void
@@ -128,7 +128,7 @@ class Checker
         $current_pwuid = posix_getpwuid(posix_getuid());
         $current_user_name = $current_pwuid['name'];
         self::$maxUserNameLength = strlen($current_user_name);
-        
+
         foreach(Config::getAllWorkers() as $worker_name=>$config)
         {
             if(strlen($worker_name)>self::$maxWorkerNameLength)
@@ -164,28 +164,28 @@ class Checker
             {
                 $worker_user = $current_user_name;
             }
-            
+
             echo str_pad($worker_user, self::$maxUserNameLength+2),str_pad($worker_name, self::$maxWorkerNameLength+2);
-            
+
             if(isset($config['listen']))
             {
                 echo str_pad($config['listen'], self::$maxListenLength+2);
             }
-            else 
+            else
             {
                 echo str_pad('none', self::$maxListenLength+2);
             }
-            
+
             if(empty($config['start_workers']))
             {
                 \Man\Core\Master::notice(str_pad($worker_name, 40)." [start_workers not set]\tWorkerman start fail");
                 exit(str_pad('', self::$maxProcessCountLength+2)."\033[31;40m [start_workers not set]\033[0m\n\n\033[31;40mWorkerman start fail\033[0m\n");
             }
-            
+
             echo str_pad(' '.$config['start_workers'], self::$maxProcessCountLength+2);
-    
+
             $total_worker_count += $config['start_workers'];
-    
+
             // 语法检查
             if($worker_file = \Man\Core\Lib\Config::get($worker_name.'.worker_file'))
             {
@@ -206,16 +206,16 @@ class Checker
             }
             echo "\033[32;40m [OK] \033[0m\n";
         }
-    
+
         if($total_worker_count > \Man\Core\Master::SERVER_MAX_WORKER_COUNT)
         {
             \Man\Core\Master::notice("Number of worker processes can not be greater than " . \Man\Core\Master::SERVER_MAX_WORKER_COUNT . ".\tPlease check start_workers in " . WORKERMAN_ROOT_DIR . "config/main.php\tWorkerman start fail");
             exit("\n\033[31;40mNumber of worker processes can not be greater than " . \Man\Core\Master::SERVER_MAX_WORKER_COUNT . ".\nPlease check start_workers in " . WORKERMAN_ROOT_DIR . "config/main.php\033[0m\n\n\033[31;40mWorkerman start fail\033[0m\n");
         }
-    
+
         echo "----------------------------------------------------------------\n";
     }
-    
+
     /**
      * 检查worker文件是否有语法错误
      * @param string $worker_name
@@ -245,7 +245,7 @@ class Checker
             exit(0);
         }
     }
-    
+
     /**
      * 检查打开文件限制
      * @return void
@@ -264,7 +264,7 @@ class Checker
             }
         }
     }
-    
+
     /**
      * 检查配置的pid文件是否可写
      * @return void
@@ -277,21 +277,21 @@ class Checker
             \Man\Core\Master::notice("\033[33;40mWorkerman already started\033[0m", true);
             exit;
         }
-        
+
         if(is_dir(WORKERMAN_PID_FILE))
         {
             exit("\n\033[31;40mpid-file ".WORKERMAN_PID_FILE." is Directory\033[0m\n\n\033[31;40mWorkerman start failed\033[0m\n\n");
         }
-        
+
         $pid_dir = dirname(WORKERMAN_PID_FILE);
         if(!is_dir($pid_dir))
         {
-            if(!mkdir($pid_dir, true))
+            if(!mkdir($pid_dir,0777, true))
             {
                 exit("Create dir $pid_dir fail\n");
             }
         }
-        
+
         if(!is_writeable($pid_dir))
         {
             exit("\n\033[31;40mYou should start the server as root\033[0m\n\n\033[31;40mWorkerman start failed\033[0m\n\n");
