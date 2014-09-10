@@ -35,11 +35,13 @@
 
 本人安装环境 PHP Version 5.3.6 NTS  FPM/FastCGI
 依赖的扩展包:
-proctitle
-sysvshm
-sysvsem
-sysvmsg
-libevent
-pcntl
+posix 必须
+pcntl 必须
+proctitle 可选
+sysvshm  可选
+sysvsem  可选
+sysvmsg  可选
+libevent  可选
+
 
  [更多请访问www.workerman.net](http://www.workerman.net/workerman-statistics)
