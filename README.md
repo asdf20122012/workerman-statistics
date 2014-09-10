@@ -40,5 +40,6 @@ sysvshm
 sysvsem
 sysvmsg
 libevent
+pcntl
 
  [更多请访问www.workerman.net](http://www.workerman.net/workerman-statistics)
