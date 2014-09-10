@@ -1,6 +1,6 @@
-<?php 
+<?php
 /**
- * 
+ *
 * @author walkor <worker-man@qq.com>
  */
 class StatisticWorker extends Man\Core\SocketWorker
@@ -10,56 +10,56 @@ class StatisticWorker extends Man\Core\SocketWorker
      * @var integer
      */
     const MAX_LOG_BUFFER_SZIE = 1024000;
-    
+
     /**
      * 多长时间写一次数据到磁盘
      * @var integer
      */
     const WRITE_PERIOD_LENGTH = 60;
-    
+
     /**
      * 多长时间清理一次老的磁盘数据
      * @var integer
      */
     const CLEAR_PERIOD_LENGTH = 86400;
-    
+
     /**
      * 数据多长时间过期
      * @var integer
      */
     const EXPIRED_TIME = 1296000;
-    
+
     /**
-     * 统计数据 
+     * 统计数据
      * ip=>modid=>interface=>['code'=>[xx=>count,xx=>count],'suc_cost_time'=>xx,'fail_cost_time'=>xx, 'suc_count'=>xx, 'fail_count'=>xx]
      * @var array
      */
     protected $statisticData = array();
-    
+
     /**
      * 日志的buffer
      * @var string
      */
     protected $logBuffer = '';
-    
+
     /**
      * 放统计数据的目录（相对于workerman/logs/）
      * @var string
      */
     protected $statisticDir = 'statistic/statistic/';
-    
+
     /**
      * 存放统计日志的目录（相对于workerman/logs/）
      * @var string
      */
     protected $logDir = 'statistic/log/';
-    
+
     /**
      * 提供统计查询的socket
      * @var resource
      */
     protected $providerSocket = null;
-    
+
     /**
      * udp 默认全部接收完毕
      * @see Man\Core.SocketWorker::dealInput()
@@ -68,7 +68,7 @@ class StatisticWorker extends Man\Core\SocketWorker
     {
         return 0;
     }
-    
+
     /**
      * 业务处理
      * @see Man\Core.SocketWorker::dealProcess()
@@ -85,12 +85,12 @@ class StatisticWorker extends Man\Core\SocketWorker
         $code = $unpack_data['code'];
         $msg = str_replace("\n", "<br>", $unpack_data['msg']);
         $ip = $this->getRemoteIp();
-        
+
         // 模块接口统计
         $this->collectStatistics($module, $interface, $cost_time, $success, $ip, $code, $msg);
         // 全局统计
         $this->collectStatistics('WorkerMan', 'Statistics', $cost_time, $success, $ip, $code, $msg);
-        
+
         // 失败记录日志
         if(!$success)
         {
@@ -101,7 +101,7 @@ class StatisticWorker extends Man\Core\SocketWorker
             }
         }
     }
-    
+
     /**
      * 收集统计数据
      * @param string $module
@@ -144,7 +144,7 @@ class StatisticWorker extends Man\Core\SocketWorker
            $this->statisticData[$ip][$module][$interface]['fail_count'] ++;
        }
    }
-    
+
    /**
     * 将统计数据写入磁盘
     * @return void
@@ -174,11 +174,11 @@ class StatisticWorker extends Man\Core\SocketWorker
        // 清空统计
        $this->statisticData = array();
    }
-    
+
     /**
      * 将日志数据写入磁盘
      * @return void
-     */    
+     */
     public function writeLogToDisk()
     {
         // 没有统计数据则返回
@@ -190,7 +190,7 @@ class StatisticWorker extends Man\Core\SocketWorker
         file_put_contents(WORKERMAN_LOG_DIR . $this->logDir . date('Y-m-d'), $this->logBuffer, FILE_APPEND | LOCK_EX);
         $this->logBuffer = '';
     }
-    
+
     /**
      * 初始化
      * 统计目录检查
@@ -219,9 +219,9 @@ class StatisticWorker extends Man\Core\SocketWorker
         // 定时清理不用的统计数据
         \Man\Core\Lib\Task::add(self::CLEAR_PERIOD_LENGTH, array($this, 'clearDisk'), array(WORKERMAN_LOG_DIR . $this->statisticDir, self::EXPIRED_TIME));
         \Man\Core\Lib\Task::add(self::CLEAR_PERIOD_LENGTH, array($this, 'clearDisk'), array(WORKERMAN_LOG_DIR . $this->logDir, self::EXPIRED_TIME));
-        
+
     }
-    
+
     /**
      * 进程停止时需要将数据写入磁盘
      * @see Man\Core.SocketWorker::onStop()
@@ -231,7 +231,7 @@ class StatisticWorker extends Man\Core\SocketWorker
         $this->writeLogToDisk();
         $this->writeStatisticsToDisk();
     }
-    
+
     /**
      * 清除磁盘数据
      * @param string $file
@@ -254,13 +254,13 @@ class StatisticWorker extends Man\Core\SocketWorker
             }
             return;
         }
-        foreach (glob($file."/*") as $file_name) 
+        foreach (glob($file."/*") as $file_name)
         {
             $this->clearDisk($file_name, $exp_time);
         }
     }
-    
-} 
+
+}
 
 /**
  *
@@ -342,7 +342,7 @@ class StatisticProtocol
         // 打包
         return pack('CCfCNnN', $module_name_length, $interface_name_length, $cost_time, $success ? 1 : 0, $code, strlen($msg), time()).$module.$interface.$msg;
     }
-     
+
     /**
      * 解包
      * @param string $bin_data

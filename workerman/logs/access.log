@@ -1,0 +1,649 @@
+2014-09-04 15:59:52	 REMOTE:172.18.67.126:1030
+GET /?date=2014-09-04& HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 15:59:52	 REMOTE:172.18.67.126:1031
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 15:59:52	 REMOTE:172.18.67.126:1035
+GET /js/scripts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 15:59:52	 REMOTE:172.18.67.126:1034
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 15:59:52	 REMOTE:172.18.67.126:1033
+GET /js/jquery.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 15:59:52	 REMOTE:172.18.67.126:1032
+GET /css/style.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 15:59:52	 REMOTE:172.18.67.126:1036
+GET /js/highcharts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:01:59	 REMOTE:172.18.67.126:1077
+GET /?date=2014-09-04& HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:01:59	 REMOTE:172.18.67.126:1078
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:01:59	 REMOTE:172.18.67.126:1083
+GET /js/highcharts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:01:59	 REMOTE:172.18.67.126:1082
+GET /js/scripts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:01:59	 REMOTE:172.18.67.126:1081
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:01:59	 REMOTE:172.18.67.126:1080
+GET /js/jquery.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:01:59	 REMOTE:172.18.67.126:1079
+GET /css/style.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:02:00	 REMOTE:172.18.67.126:1084
+GET /?date=2014-09-04& HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:02:00	 REMOTE:172.18.67.126:1085
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:02:00	 REMOTE:172.18.67.126:1089
+GET /js/scripts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:02:00	 REMOTE:172.18.67.126:1088
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:02:00	 REMOTE:172.18.67.126:1087
+GET /js/jquery.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:02:00	 REMOTE:172.18.67.126:1086
+GET /css/style.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:02:00	 REMOTE:172.18.67.126:1090
+GET /js/highcharts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:02:02	 REMOTE:172.18.67.126:1091
+GET /?fn=statistic HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/?date=2014-09-04&
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:02:02	 REMOTE:172.18.67.126:1092
+GET /?fn=logger HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/?fn=statistic
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:02:03	 REMOTE:172.18.67.126:1093
+GET / HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/?fn=logger
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:34:51	 REMOTE:172.18.67.126:1344
+GET / HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/?fn=logger
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:34:51	 REMOTE:172.18.67.126:1345
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:34:51	 REMOTE:172.18.67.126:1349
+GET /js/scripts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:34:51	 REMOTE:172.18.67.126:1348
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:34:51	 REMOTE:172.18.67.126:1347
+GET /js/jquery.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:34:51	 REMOTE:172.18.67.126:1346
+GET /css/style.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 16:34:51	 REMOTE:172.18.67.126:1350
+GET /js/highcharts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 17:28:30	 REMOTE:172.18.67.126:1865
+GET / HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/?fn=logger
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 17:28:30	 REMOTE:172.18.67.126:1866
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 17:28:30	 REMOTE:172.18.67.126:1870
+GET /js/scripts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 17:28:30	 REMOTE:172.18.67.126:1869
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 17:28:30	 REMOTE:172.18.67.126:1868
+GET /js/jquery.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 17:28:30	 REMOTE:172.18.67.126:1867
+GET /css/style.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-04 17:28:30	 REMOTE:172.18.67.126:1871
+GET /js/highcharts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+If-Modified-Since: Wed, 09 Jul 2014 07:30:06 GMT
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-09 14:28:04	 REMOTE:172.18.67.126:2645
+GET / HTTP/1.1
+Accept: */*
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:04	 REMOTE:172.18.67.126:2646
+GET /css/bootstrap.min.css HTTP/1.1
+Accept: */*
+Referer: http://172.18.9.91:55757/
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:04	 REMOTE:172.18.67.126:2647
+GET /css/style.css HTTP/1.1
+Accept: */*
+Referer: http://172.18.9.91:55757/
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:04	 REMOTE:172.18.67.126:2648
+GET /fonts/glyphicons-halflings-regular.eot? HTTP/1.1
+Accept: */*
+Referer: http://172.18.9.91:55757/
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:04	 REMOTE:172.18.67.126:2649
+GET /js/html5shiv.js HTTP/1.1
+Accept: */*
+Referer: http://172.18.9.91:55757/
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:04	 REMOTE:172.18.67.126:2650
+GET /js/jquery.min.js HTTP/1.1
+Accept: */*
+Referer: http://172.18.9.91:55757/
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:04	 REMOTE:172.18.67.126:2651
+GET /js/bootstrap.min.js HTTP/1.1
+Accept: */*
+Referer: http://172.18.9.91:55757/
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:04	 REMOTE:172.18.67.126:2652
+GET /js/scripts.js HTTP/1.1
+Accept: */*
+Referer: http://172.18.9.91:55757/
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:04	 REMOTE:172.18.67.126:2653
+GET /js/highcharts.js HTTP/1.1
+Accept: */*
+Referer: http://172.18.9.91:55757/
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:05	 REMOTE:172.18.67.126:2654
+GET /img/favicon.png HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:08	 REMOTE:172.18.67.126:2655
+GET /?date=2014-09-04& HTTP/1.1
+Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, application/x-ms-application, application/x-ms-xbap, application/xaml+xml, application/vnd.ms-xpsdocument, */*
+Referer: http://172.18.9.91:55757/
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:08	 REMOTE:172.18.67.126:2656
+GET /fonts/glyphicons-halflings-regular.eot? HTTP/1.1
+Accept: */*
+Referer: http://172.18.9.91:55757/?date=2014-09-04&
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Accept-Encoding: gzip, deflate
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:08	 REMOTE:172.18.67.126:2657
+GET /img/favicon.png HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0; InfoPath.2; .NET4.0E; .NET4.0C; .NET CLR 3.0.4506.2152; .NET CLR 3.5.30729; .NET CLR 2.0.50727)
+Host: 172.18.9.91:55757
+Connection: Keep-Alive
+
+2014-09-09 14:28:17	 REMOTE:172.18.67.126:2674
+GET / HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-09 14:28:17	 REMOTE:172.18.67.126:2675
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-09 14:28:17	 REMOTE:172.18.67.126:2680
+GET /js/highcharts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-09 14:28:17	 REMOTE:172.18.67.126:2679
+GET /js/scripts.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-09 14:28:17	 REMOTE:172.18.67.126:2678
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-09 14:28:17	 REMOTE:172.18.67.126:2677
+GET /js/jquery.min.js HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-09 14:28:17	 REMOTE:172.18.67.126:2676
+GET /css/style.css HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+
+2014-09-09 14:28:19	 REMOTE:172.18.67.126:2681
+GET /?date=2014-09-04& HTTP/1.1
+Host: 172.18.9.91:55757
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36
+Referer: http://172.18.9.91:55757/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8,en;q=0.6,zh-TW;q=0.4
+

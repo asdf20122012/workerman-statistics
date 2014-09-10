@@ -1,6 +1,5 @@
-<?php 
+<?php
 namespace Man\Core;
-
 if(!defined('WORKERMAN_ROOT_DIR'))
 {
     define('WORKERMAN_ROOT_DIR', realpath(__DIR__."/../../")."/");
@@ -13,11 +12,11 @@ require_once WORKERMAN_ROOT_DIR . 'Core/Lib/Log.php';
 require_once WORKERMAN_ROOT_DIR . 'Core/Lib/Mutex.php';
 
 /**
- * 
+ *
  * 主进程
- * 
+ *
  * @package Core
- * 
+ *
 * @author walkor <workerman.net>
  * <b>使用示例:</b>
  * <pre>
@@ -25,7 +24,7 @@ require_once WORKERMAN_ROOT_DIR . 'Core/Lib/Mutex.php';
  * Man\Core\Master::run();
  * <code>
  * </pre>
- * 
+ *
  */
 class Master
 {
@@ -34,109 +33,109 @@ class Master
      * @var string
      */
     const VERSION = '2.1.1';
-    
+
     /**
      * 服务名
      * @var string
      */
     const NAME = 'WorkerMan';
-    
+
     /**
      * 服务状态 启动中
      * @var integer
-     */ 
+     */
     const STATUS_STARTING = 1;
-    
+
     /**
      * 服务状态 运行中
      * @var integer
      */
     const STATUS_RUNNING = 2;
-    
+
     /**
      * 服务状态 关闭中
      * @var integer
      */
     const STATUS_SHUTDOWN = 4;
-    
+
     /**
      * 服务状态 平滑重启中
      * @var integer
      */
     const STATUS_RESTARTING_WORKERS = 8;
-    
+
     /**
      * 整个服务能够启动的最大进程数
      * @var integer
      */
     const SERVER_MAX_WORKER_COUNT = 5000;
-    
+
     /**
      * 单个进程打开文件数限制
      * @var integer
      */
     const MIN_SOFT_OPEN_FILES = 10000;
-    
+
     /**
      * 单个进程打开文件数限制 硬性限制
      * @var integer
      */
     const MIN_HARD_OPEN_FILES = 10000;
-    
+
     /**
      * 共享内存中用于存储主进程统计信息的变量id
      * @var integer
      */
     const STATUS_VAR_ID = 1;
-    
+
     /**
      * 发送停止命令多久后worker没退出则发送sigkill信号
      * @var integer
      */
     const KILL_WORKER_TIME_LONG = 4;
-    
+
     /**
      * 用于保存所有子进程pid ['worker_name1'=>[pid1=>pid1,pid2=>pid2,..], 'worker_name2'=>[pid7,..], ...]
      * @var array
      */
     protected static $workerPidMap = array();
-    
+
     /**
      * 服务的状态，默认是启动中
      * @var integer
      */
     protected static $serviceStatus = self::STATUS_STARTING;
-    
+
     /**
      * 用来监听端口的Socket数组，用来fork worker使用
      * @var array
      */
     protected static $listenedSocketsArray = array();
-    
+
     /**
      * 要重启r的pid数组 [pid1=>time_stamp, pid2=>time_stamp, ..]
      * @var array
      */
     protected static $pidsToRestart = array();
-    
+
     /**
      * 共享内存resource id
      * @var resource
      */
     protected static $shmId = 0;
-    
+
     /**
      * 消息队列 resource id
      * @var resource
      */
     protected static $queueId = 0;
-    
+
     /**
      * master进程pid
      * @var integer
      */
     protected static $masterPid = 0;
-    
+
     /**
      * server统计信息 ['start_time'=>time_stamp, 'worker_exit_code'=>['worker_name1'=>[code1=>count1, code2=>count2,..], 'worker_name2'=>[code3=>count3,...], ..] ]
      * @var array
@@ -145,7 +144,7 @@ class Master
         'start_time' => 0,
         'worker_exit_code' => array(),
     );
-    
+
     /**
      * 服务运行
      * @return void
@@ -179,8 +178,8 @@ class Master
         // 主循环
         self::loop();
     }
-    
-    
+
+
     /**
      * 初始化 配置、进程名、共享内存、消息队列等
      * @return void
@@ -189,10 +188,10 @@ class Master
     {
         // 获取配置文件
         $config_path = Lib\Config::$configFile;
-    
+
         // 设置进程名称，如果支持的话
         self::setProcTitle(self::NAME.':master with-config:' . $config_path);
-        
+
         // 初始化共享内存消息队列
         if(extension_loaded('sysvmsg') && extension_loaded('sysvshm'))
         {
@@ -201,7 +200,7 @@ class Master
             msg_set_queue(self::$queueId,array('msg_qbytes'=>65535));
         }
     }
-    
+
     /**
      * 检查环境配置
      * @return void
@@ -210,23 +209,23 @@ class Master
     {
         // 检查PID文件
         Lib\Checker::checkPidFile();
-        
+
         // 检查扩展支持情况
         Lib\Checker::checkExtension();
-        
+
         // 检查函数禁用情况
         Lib\Checker::checkDisableFunction();
-        
+
         // 检查log目录是否可读
         Lib\Log::init();
-        
+
         // 检查配置和语法错误等
         Lib\Checker::checkWorkersConfig();
-        
+
         // 检查文件限制
         Lib\Checker::checkLimit();
     }
-    
+
     /**
      * 使之脱离终端，变为守护进程
      * @return void
@@ -253,7 +252,7 @@ class Master
             // 出错退出
             exit("Setsid fail");
         }
-    
+
         // 再fork一次
         $pid2 = pcntl_fork();
         if(-1 == $pid2)
@@ -266,11 +265,11 @@ class Master
             // 禁止进程重新打开控制终端
             exit(0);
         }
-    
+
         // 记录服务启动时间
         self::$serviceStatusInfo['start_time'] = time();
     }
-    
+
     /**
      * 保存主进程pid
      * @return void
@@ -279,17 +278,17 @@ class Master
     {
         // 保存在变量中
         self::$masterPid = posix_getpid();
-        
+
         // 保存到文件中，用于实现停止、重启
         if(false === @file_put_contents(WORKERMAN_PID_FILE, self::$masterPid))
         {
             exit("\033[31;40mCan not save pid to pid-file(" . WORKERMAN_PID_FILE . ")\033[0m\n\n\033[31;40mServer start fail\033[0m\n\n");
         }
-        
+
         // 更改权限
         chmod(WORKERMAN_PID_FILE, 0644);
     }
-    
+
     /**
      * 获取主进程pid
      * @return int
@@ -298,7 +297,7 @@ class Master
     {
         return self::$masterPid;
     }
-    
+
     /**
      * 根据配置文件，创建监听套接字
      * @return void
@@ -323,8 +322,8 @@ class Master
             }
         }
     }
-    
-    
+
+
     /**
      * 根据配置文件创建Workers
      * @return void
@@ -339,7 +338,7 @@ class Master
             {
                 self::$workerPidMap[$worker_name] = array();
             }
-    
+
             while(count(self::$workerPidMap[$worker_name]) < $config['start_workers'])
             {
                 // 子进程退出
@@ -351,7 +350,7 @@ class Master
             }
         }
     }
-    
+
     /**
      * 创建一个worker进程
      * @param string $worker_name 服务名
@@ -361,10 +360,10 @@ class Master
     {
         // 创建子进程
         $pid = pcntl_fork();
-        
+
         // 先处理收到的信号
         pcntl_signal_dispatch();
-        
+
         // 父进程
         if($pid > 0)
         {
@@ -372,7 +371,7 @@ class Master
             self::$workerPidMap[$worker_name][$pid] = $pid;
             // 更新进程信息到共享内存
             self::updateStatusToShm();
-            
+
             return $pid;
         }
         // 子进程
@@ -380,10 +379,10 @@ class Master
         {
             // 忽略信号
             self::ignoreSignal();
-            
+
             // 清空任务
             Lib\Task::delAll();
-            
+
             // 关闭不用的监听socket
             foreach(self::$listenedSocketsArray as $tmp_worker_name => $tmp_socket)
             {
@@ -392,42 +391,42 @@ class Master
                     fclose($tmp_socket);
                 }
             }
-    
+
             // 尝试以指定用户运行worker进程
             if($worker_user = Lib\Config::get($worker_name . '.user'))
             {
                 self::setProcUser($worker_user);
             }
-            
+
             // 关闭输出
             self::resetStdFd(Lib\Config::get($worker_name.'.no_debug'));
-    
+
             // 尝试设置子进程进程名称
             self::setWorkerProcTitle($worker_name);
-    
+
             // 包含必要文件
             require_once WORKERMAN_ROOT_DIR . 'Core/SocketWorker.php';
-            
+
             // 查找worker文件
             $worker_file = \Man\Core\Lib\Config::get($worker_name.'.worker_file');
             $class_name = basename($worker_file, '.php');
-            
+
             // 如果有语法错误 sleep 5秒 避免狂刷日志
             if(\Man\Core\Lib\Checker::checkSyntaxError($worker_file, $class_name))
             {
                 sleep(5);
             }
             require_once $worker_file;
-            
+
             // 创建实例
             $worker = new $class_name($worker_name);
-            
+
             // 如果该worker有配置监听端口，则将监听端口的socket传递给子进程
             if(isset(self::$listenedSocketsArray[$worker_name]))
             {
                 $worker->setListendSocket(self::$listenedSocketsArray[$worker_name]);
             }
-            
+
             // 使worker开始服务
             $worker->start();
             return 0;
@@ -439,8 +438,8 @@ class Master
             return $pid;
         }
     }
-    
-    
+
+
     /**
      * 安装相关信号控制器
      * @return void
@@ -455,7 +454,7 @@ class Master
         pcntl_signal(SIGHUP, array('\Man\Core\Master', 'signalHandler'), false);
         // 设置子进程退出信号处理函数
         pcntl_signal(SIGCHLD, array('\Man\Core\Master', 'signalHandler'), false);
-    
+
         // 设置忽略信号
         pcntl_signal(SIGPIPE, SIG_IGN);
         pcntl_signal(SIGTTIN, SIG_IGN);
@@ -463,7 +462,7 @@ class Master
         pcntl_signal(SIGQUIT, SIG_IGN);
         pcntl_signal(SIGALRM, SIG_IGN);
     }
-    
+
     /**
      * 忽略信号
      * @return void
@@ -480,7 +479,7 @@ class Master
         pcntl_signal(SIGUSR1, SIG_IGN);
         pcntl_signal(SIGHUP, SIG_IGN);
     }
-    
+
     /**
      * 设置server信号处理函数
      * @param null $null
@@ -526,7 +525,7 @@ class Master
                 break;
         }
     }
-    
+
     /**
      * 设置子进程进程名称
      * @param string $worker_name
@@ -538,7 +537,7 @@ class Master
         {
             // 获得socket的信息
             $sock_name = stream_socket_get_name(self::$listenedSocketsArray[$worker_name], false);
-            
+
             // 更改进程名，如果支持的话
             $mata_data = stream_get_meta_data(self::$listenedSocketsArray[$worker_name]);
             $protocol = substr($mata_data['stream_type'], 0, 3);
@@ -548,9 +547,9 @@ class Master
         {
             self::setProcTitle(self::NAME.":worker $worker_name");
         }
-            
+
     }
-    
+
     /**
      * 主进程主循环 主要是监听子进程退出、服务终止、平滑重启信号
      * @return void
@@ -567,8 +566,8 @@ class Master
             pcntl_signal_dispatch();
         }
     }
-    
-    
+
+
     /**
      * 监控worker进程状态，退出重启
      * @param resource $channel
@@ -587,14 +586,14 @@ class Master
                 unset(self::$pidsToRestart[$pid]);
                 self::restartPids();
             }
-    
+
             // 出错
             if($pid < 0)
             {
                 self::notice('pcntl_waitpid return '.$pid.' and pcntl_get_last_error = ' . pcntl_get_last_error());
                 return $pid;
             }
-    
+
             // 查找子进程对应的woker_name
             $pid_workname_map = self::getPidWorkerNameMap();
             $worker_name = isset($pid_workname_map[$pid]) ? $pid_workname_map[$pid] : '';
@@ -604,7 +603,7 @@ class Master
                 self::notice("child exist but not found worker_name pid:$pid");
                 break;
             }
-    
+
             // 进程退出状态不是0，说明有问题了
             if($status !== 0)
             {
@@ -614,10 +613,10 @@ class Master
             self::$serviceStatusInfo['worker_exit_code'][$worker_name][$status] = isset(self::$serviceStatusInfo['worker_exit_code'][$worker_name][$status]) ? self::$serviceStatusInfo['worker_exit_code'][$worker_name][$status] + 1 : 1;
             // 更新状态到共享内存
             self::updateStatusToShm();
-            
+
             // 清理这个进程的数据
             self::clearWorker($worker_name, $pid);
-    
+
             // 如果服务是不是关闭中
             if(self::$serviceStatus != self::STATUS_SHUTDOWN)
             {
@@ -641,7 +640,7 @@ class Master
             }//end if
         }//end while
     }
-    
+
     /**
      * 获取pid 到 worker_name 的映射
      * @return array ['pid1'=>'worker_name1','pid2'=>'worker_name2', ...]
@@ -658,7 +657,7 @@ class Master
         }
         return $all_pid;
     }
-    
+
     /**
      * 放入重启队列中
      * @param array $restart_pids
@@ -671,7 +670,7 @@ class Master
             self::notice("addToRestartPids(".var_export($restart_pids, true).") \$restart_pids not array");
             return false;
         }
-    
+
         // 将pid放入重启队列
         foreach($restart_pids as $pid)
         {
@@ -682,7 +681,7 @@ class Master
             }
         }
     }
-    
+
     /**
      * 重启workers
      * @return void
@@ -694,7 +693,7 @@ class Master
         {
             self::$serviceStatus = self::STATUS_RESTARTING_WORKERS;
         }
-    
+
         // 没有要重启的进程了
         if(empty(self::$pidsToRestart))
         {
@@ -702,7 +701,7 @@ class Master
             self::notice("\nWorker Restart Success");
             return true;
         }
-    
+
         // 遍历要重启的进程 标记它们重启时间
         foreach(self::$pidsToRestart as $pid => $stop_time)
         {
@@ -715,7 +714,7 @@ class Master
             }
         }
     }
-    
+
     /**
      * worker进程退出时，master进程的一些清理工作
      * @param string $worker_name
@@ -727,31 +726,31 @@ class Master
         // 释放一些不用了的数据
         unset(self::$pidsToRestart[$pid], self::$workerPidMap[$worker_name][$pid]);
     }
-    
+
     /**
      * 停止服务
      * @return void
      */
     public static function stop()
     {
-        
+
         // 如果没有子进程则直接退出
         $all_worker_pid = self::getPidWorkerNameMap();
         if(empty($all_worker_pid))
         {
             exit(0);
         }
-    
+
         // 标记server开始关闭
         self::$serviceStatus = self::STATUS_SHUTDOWN;
-    
+
         // killWorkerTimeLong 秒后如果还没停止则强制杀死所有进程
         Lib\Task::add(self::KILL_WORKER_TIME_LONG, array('\Man\Core\Master', 'stopAllWorker'), array(true), false);
-    
+
         // 停止所有worker
         self::stopAllWorker();
     }
-    
+
     /**
      * 停止所有worker
      * @param bool $force 是否强制退出
@@ -761,7 +760,7 @@ class Master
     {
         // 获得所有pid
         $all_worker_pid = self::getPidWorkerNameMap();
-    
+
         // 强行杀死
         if($force)
         {
@@ -783,8 +782,8 @@ class Master
             }
         }
     }
-    
-    
+
+
     /**
      * 强制杀死进程
      * @param int $pid
@@ -798,8 +797,8 @@ class Master
             posix_kill($pid, SIGKILL);
         }
     }
-    
-    
+
+
     /**
      * 设置运行用户
      * @param string $worker_user
@@ -817,7 +816,7 @@ class Master
             }
         }
     }
-    
+
     /**
      * 获取共享内存资源id
      * @return resource
@@ -826,7 +825,7 @@ class Master
     {
         return self::$shmId;
     }
-    
+
     /**
      * 获取消息队列资源id
      * @return resource
@@ -835,8 +834,8 @@ class Master
     {
         return self::$queueId;
     }
-    
-    
+
+
     /**
      * 关闭标准输入输出
      * @return void
@@ -859,7 +858,7 @@ class Master
         $STDOUT = fopen('/dev/null',"rw+");
         $STDERR = fopen('/dev/null',"rw+");
     }
-    
+
     /**
      * 更新主进程收集的状态信息到共享内存
      * @return bool
@@ -872,7 +871,7 @@ class Master
         }
         return shm_put_var(self::$shmId, self::STATUS_VAR_ID, array_merge(self::$serviceStatusInfo, array('pid_map'=>self::$workerPidMap)));
     }
-    
+
     /**
      * 销毁共享内存以及消息队列
      * @return void
@@ -888,7 +887,7 @@ class Master
             msg_remove_queue(self::$queueId);
         }
     }
-    
+
     /**
      * 设置进程名称，需要proctitle支持 或者php>=5.5
      * @param string $title
@@ -907,7 +906,7 @@ class Master
             @setproctitle($title);
         }
     }
-    
+
     /**
      * notice,记录到日志
      * @param string $msg

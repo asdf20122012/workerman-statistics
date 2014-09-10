@@ -10,7 +10,7 @@ class StatisticClient
      * @var array
      */
     protected static $timeMap = array();
-    
+
     /**
      * 模块接口上报消耗时间记时
      * @param string $module
@@ -21,7 +21,7 @@ class StatisticClient
     {
         return self::$timeMap[$module][$interface] = microtime(true);
     }
-    
+
     /**
      * 上报统计数据
      * @param string $module
@@ -49,14 +49,14 @@ class StatisticClient
         {
             $time_start = microtime(true);
         }
-         
+
         $cost_time = microtime(true) - $time_start;
-        
+
         $bin_data = StatisticProtocol::encode($module, $interface, $cost_time, $success, $code, $msg);
-        
+
         return self::sendData($report_address, $bin_data);
     }
-    
+
     /**
      * 发送数据给统计系统
      * @param string $address
@@ -66,13 +66,13 @@ class StatisticClient
     public static function sendData($address, $buffer)
     {
         $socket = stream_socket_client($address);
-        if(!$socket)
+   		if(!$socket)
         {
             return false;
         }
-        return stream_socket_sendto($socket, $buffer) == strlen($buffer);
+       	return stream_socket_sendto($socket, $buffer) == strlen($buffer);
     }
-    
+
 }
 
 /**
@@ -155,7 +155,7 @@ class StatisticProtocol
         // 打包
         return pack('CCfCNnN', $module_name_length, $interface_name_length, $cost_time, $success ? 1 : 0, $code, strlen($msg), time()).$module.$interface.$msg;
     }
-     
+
     /**
      * 解包
      * @param string $bin_data
@@ -183,10 +183,31 @@ class StatisticProtocol
 
 if(PHP_SAPI == 'cli' && isset($argv[0]) && $argv[0] == basename(__FILE__))
 {
-    StatisticClient::tick("TestModule", 'TestInterface');
-    usleep(rand(10000, 600000));
-    $success = rand(0,1);
-    $code = rand(300, 400);
-    $msg = '这个是测试消息';
-    var_export(StatisticClient::report('TestModule', 'TestInterface', $success, $code, $msg));;
+	$time = microtime(true);
+    $f = 0;
+    $s = 0;
+    $num = 0;
+    while ($num < 500){
+    	sleep(1);
+    	$j = 0;
+     while($j < 100000){
+     		StatisticClient::tick("TestModule", 'TestInterface');
+		    $success = 0;
+		    $code = 300;
+		    $msg = '这个是测试消息';
+		    $a = StatisticClient::report('TestModule', 'TestInterface', $success, $code, $msg);
+			if (!$a) {
+				$f++;
+			}else{
+				$s++;
+			}
+			$j++;
+     }
+     $num++;
+     $s+=$j;
+     }
+     echo $j."\r\n";
+     echo $f."\r\n";
+     echo $s."\r\n";
+     echo microtime(true) - $time,"\r\n";
 }
